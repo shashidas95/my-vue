@@ -1,15 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <p>simple text</p>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+import PageViewer from './components/PageViewer.vue';
+export default{
+ components:{
+  PageViewer
+ },
+  data(){
+    return{
+      activePage:0,
+      pages:[
+        { 
+        link:{text:'Home',url:'index.html'} ,
+        pageTitle:'Home page',
+        content:'This is home content'
+        },
+        { 
+        link:{text:'About',url:'about.html'} ,
+        pageTitle:'About page',
+        content:'This is About content'
+        },
+        { 
+        link:{text:'Contact',url:'contact.html'} ,
+        pageTitle:'Contact page',
+        content:'This is contact content'
+        },
+      ]
+    };
   }
 }
 </script>
