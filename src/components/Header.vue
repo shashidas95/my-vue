@@ -1,12 +1,14 @@
 <template>
   <header>
-    <h1>Task tracker</h1>
+    <h1>{{ title }}</h1>
   </header>
 </template>
+
 <!-- scripts -->
 <script>
 export default {
   name: 'Header',
+  props: ['title'],
 }
 </script>
 <!-- styles -->
